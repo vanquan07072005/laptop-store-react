@@ -1,0 +1,89 @@
+.header{
+    width:100%;
+}
+
+/* TOP HEADER */
+
+.header-top{
+
+    background:#111;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:15px 40px;
+
+}
+
+.logo{
+
+    color:#2ecc71;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.search{
+
+    width:350px;
+
+    padding:10px;
+
+    border-radius:6px;
+
+    border:none;
+
+}
+
+.header-right{
+
+    color:white;
+
+    display:flex;
+
+    gap:20px;
+
+    font-size:16px;
+
+}
+
+/* MENU */
+
+.menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    background:#1e90ff;   /* màu xanh dễ nhìn */
+
+    padding:14px;
+
+}
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+.menu a:hover{
+
+    color:#00ff9d;
+
+}

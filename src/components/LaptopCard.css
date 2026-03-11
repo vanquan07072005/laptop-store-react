@@ -1,0 +1,90 @@
+.product-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:25px;
+
+}
+
+.laptop-card{
+
+    background:white;
+    border-radius:12px;
+    padding:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+    position:relative;
+
+    text-align:center;
+
+}
+
+.laptop-card:hover{
+
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+.laptop-image{
+
+    width:100%;
+    height:180px;
+
+    object-fit:contain;
+
+    border-radius:8px;
+
+    background:#f5f5f5;
+
+}
+
+.laptop-name{
+
+    font-size:14px;
+    margin-top:10px;
+    font-weight:600;
+    height:40px;
+
+}
+
+.rating{
+
+    color:#f1c40f;
+    margin-top:5px;
+
+}
+
+.laptop-price{
+
+    color:red;
+    font-weight:bold;
+    margin:10px 0;
+
+}
+
+.cart-btn{
+
+    background:#ee4d2d;
+    color:white;
+
+    border:none;
+    padding:10px;
+
+    width:100%;
+
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+.wishlist{
+
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+
+}

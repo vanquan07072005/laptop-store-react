@@ -1,0 +1,33 @@
+.navbar{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+
+    background:#1e90ff !important;   /* xanh nước biển */
+
+    padding:15px;
+
+}
+
+.navbar a{
+
+    color:white !important;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    font-family:Arial, sans-serif;
+
+    transition:0.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#00ff9d !important;   /* xanh lá */
+
+}
