@@ -1,64 +1,56 @@
-import { useParams } from "react-router-dom"
-import laptops from "../data/laptops"
+import React from "react";
+import { useParams } from "react-router-dom";
+import laptops from "../data/laptops";
 
-function ProductDetail(){
+function ProductDetail() {
+    const { id } = useParams();
 
-    const {id} = useParams()
+    const product = laptops.find((item) => item.id === Number(id));
 
-    const product = laptops.find(p=>p.id==id)
+    if (!product) {
+        return <h2 style={{ textAlign: "center" }}>Product not found</h2>;
+    }
 
-    if(!product) return <h2>Không tìm thấy sản phẩm</h2>
-
-    return(
-
-        <div style={{
-            padding:"40px",
-            display:"flex",
-            gap:"40px"
-        }}>
-
+    return (
+        <div
+            style={{
+                maxWidth: "1000px",
+                margin: "40px auto",
+                display: "flex",
+                gap: "30px"
+            }}
+        >
             <img
                 src={product.image}
+                alt={product.name}
                 style={{
-                    width:"400px",
-                    borderRadius:"10px"
+                    width: "400px",
+                    borderRadius: "10px"
                 }}
             />
 
             <div>
+                <h1>{product.name}</h1>
 
-                <h2>{product.name}</h2>
+                <h2 style={{ color: "red" }}>{product.price}</h2>
 
-                <h3 style={{color:"red"}}>
-                    {product.price.toLocaleString()} đ
-                </h3>
-
-                <p>
-
-                    Laptop chính hãng, bảo hành 12 tháng.
-
-                </p>
+                <p>{product.description}</p>
 
                 <button
                     style={{
-                        background:"#ee4d2d",
-                        color:"white",
-                        padding:"12px 20px",
-                        border:"none",
-                        borderRadius:"6px"
+                        padding: "10px 20px",
+                        background: "#ff4d4f",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "6px",
+                        cursor: "pointer"
                     }}
                 >
-
-                    🛒 Thêm vào giỏ
-
+                    Thêm vào giỏ
                 </button>
-
             </div>
-
         </div>
-
-    )
-
+    );
 }
 
-export default ProductDetail
+export default ProductDetail;
